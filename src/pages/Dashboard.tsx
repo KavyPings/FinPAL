@@ -31,7 +31,7 @@ const Dashboard = () => {
 
   return (
     <div className="min-h-screen bg-background pb-24">
-      {/* Header */}
+      
       <div className="bg-gradient-hero px-5 pt-4 pb-8 rounded-b-[2rem]">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-2">
@@ -59,7 +59,7 @@ const Dashboard = () => {
           </h1>
         </div>
 
-        {/* Financial Context Card */}
+        
         <Card className="bg-primary-foreground/10 backdrop-blur-sm border-0 text-primary-foreground">
           <CardContent className="p-4">
             <div className="flex items-center justify-between">
@@ -78,7 +78,7 @@ const Dashboard = () => {
         </Card>
       </div>
 
-      {/* Quick Actions */}
+      
       <div className="px-5 -mt-4">
         <div className="grid grid-cols-4 gap-3 mb-6">
           <QuickAction 
@@ -104,7 +104,7 @@ const Dashboard = () => {
           />
         </div>
 
-        {/* Goals Overview */}
+        
         <section className="mb-6">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-lg font-bold text-foreground">Your Goals</h2>
@@ -113,7 +113,7 @@ const Dashboard = () => {
             </Button>
           </div>
 
-          {/* Short-term Goals */}
+          
           <div className="mb-4">
             <p className="text-sm font-medium text-muted-foreground mb-3">Short-term</p>
             <div className="space-y-3">
@@ -123,7 +123,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          {/* Long-term Goals */}
+          
           <div>
             <p className="text-sm font-medium text-muted-foreground mb-3">Long-term</p>
             <div className="space-y-3">
@@ -134,7 +134,7 @@ const Dashboard = () => {
           </div>
         </section>
 
-        {/* Tip of the Day */}
+        
         <Card variant="gradient" className="mb-6">
           <CardContent className="p-5">
             <div className="flex items-start gap-3">
@@ -151,7 +151,7 @@ const Dashboard = () => {
           </CardContent>
         </Card>
 
-        {/* Decision Prompt */}
+        
         <Card 
           variant="outline" 
           className="cursor-pointer hover:border-primary transition-colors"

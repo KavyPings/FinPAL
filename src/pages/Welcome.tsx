@@ -8,7 +8,7 @@ const Welcome = () => {
 
   return (
     <div className="min-h-screen bg-gradient-hero flex flex-col">
-      {/* Hero Section */}
+      
       <div className="flex-1 flex flex-col items-center justify-center px-6 pt-16 pb-8 text-center">
         <div className="animate-float mb-8">
           <div className="w-24 h-24 rounded-3xl bg-primary-foreground/20 backdrop-blur-sm flex items-center justify-center shadow-glow">
@@ -27,7 +27,7 @@ const Welcome = () => {
         </p>
       </div>
 
-      {/* Features Preview */}
+      
       <div className="bg-card rounded-t-[2.5rem] px-6 py-8 animate-slide-up">
         <div className="grid grid-cols-3 gap-4 mb-8">
           <FeatureCard 

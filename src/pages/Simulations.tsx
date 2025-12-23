@@ -30,14 +30,14 @@ const Simulations = () => {
   const { addPoints } = useApp();
   const [activeSimulation, setActiveSimulation] = useState<SimulationType>('sip-rd-fd');
   
-  // SIP/RD/FD states
+  
   const [amount, setAmount] = useState(5000);
   const [duration, setDuration] = useState(60);
   const [sipRate, setSipRate] = useState(12);
   const [rdRate, setRdRate] = useState(7);
   const [fdRate, setFdRate] = useState(6.5);
 
-  // Loan states
+  
   const [loanAmount, setLoanAmount] = useState(500000);
   const [loanRate, setLoanRate] = useState(10);
   const [loanTenure, setLoanTenure] = useState(36);
@@ -79,7 +79,7 @@ const Simulations = () => {
 
   return (
     <div className="min-h-screen bg-background pb-24">
-      {/* Header */}
+      
       <div className="px-5 pt-4 pb-4">
         <div className="flex items-center gap-3 mb-4">
           <Button variant="ghost" size="icon-sm" onClick={() => navigate('/dashboard')}>
@@ -91,7 +91,7 @@ const Simulations = () => {
           </div>
         </div>
 
-        {/* Simulation Tabs */}
+        
         <div className="flex gap-2">
           <Button
             variant={activeSimulation === 'sip-rd-fd' ? 'default' : 'muted'}
@@ -115,7 +115,7 @@ const Simulations = () => {
       <div className="px-5 space-y-4">
         {activeSimulation === 'sip-rd-fd' ? (
           <>
-            {/* Amount Slider */}
+            
             <SliderControl
               label="Monthly Investment"
               value={amount}
@@ -126,7 +126,7 @@ const Simulations = () => {
               format={(v) => `₹${v.toLocaleString('en-IN')}`}
             />
 
-            {/* Duration Slider */}
+            
             <SliderControl
               label="Duration"
               value={duration}
@@ -137,7 +137,7 @@ const Simulations = () => {
               format={(v) => `${v} months`}
             />
 
-            {/* Chart */}
+            
             <Card variant="elevated">
               <CardHeader className="pb-2">
                 <CardTitle className="text-base">Growth Comparison</CardTitle>
@@ -203,7 +203,7 @@ const Simulations = () => {
               </CardContent>
             </Card>
 
-            {/* Result Cards */}
+            
             <div className="grid grid-cols-3 gap-3">
               <ResultCard
                 icon={<TrendingUp className="w-5 h-5" />}
@@ -230,7 +230,7 @@ const Simulations = () => {
           </>
         ) : (
           <>
-            {/* Loan Amount Slider */}
+            
             <SliderControl
               label="Loan Amount"
               value={loanAmount}
@@ -241,7 +241,7 @@ const Simulations = () => {
               format={(v) => `₹${(v / 100000).toFixed(1)}L`}
             />
 
-            {/* Interest Rate Slider */}
+            
             <SliderControl
               label="Interest Rate"
               value={loanRate}
@@ -252,7 +252,7 @@ const Simulations = () => {
               format={(v) => `${v}%`}
             />
 
-            {/* Tenure Comparison Chart */}
+            
             <Card variant="elevated">
               <CardHeader className="pb-2">
                 <CardTitle className="text-base">Tenure vs Interest</CardTitle>
@@ -296,7 +296,7 @@ const Simulations = () => {
               </CardContent>
             </Card>
 
-            {/* Loan Summary */}
+            
             <div className="grid grid-cols-2 gap-3">
               {[24, 36, 48, 60].map((tenure) => {
                 const emi = calculateEMI(loanAmount, loanRate, tenure);
@@ -327,7 +327,7 @@ const Simulations = () => {
           </>
         )}
 
-        {/* Disclaimer */}
+        
         <Card className="bg-muted/50 border-0">
           <CardContent className="p-4">
             <p className="text-xs text-muted-foreground">
@@ -415,7 +415,6 @@ const ResultCard = ({
   );
 };
 
-// Calculation functions
 function calculateSIPValue(monthly: number, rate: number, months: number): number {
   const r = rate / 100 / 12;
   return monthly * ((Math.pow(1 + r, months) - 1) / r) * (1 + r);

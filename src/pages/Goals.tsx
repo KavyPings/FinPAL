@@ -44,7 +44,7 @@ const Goals = () => {
 
   return (
     <div className="min-h-screen bg-background pb-24">
-      {/* Header */}
+      
       <div className="px-5 pt-4 pb-4">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
@@ -61,7 +61,7 @@ const Goals = () => {
           </Button>
         </div>
 
-        {/* Progress Overview */}
+        
         <Card variant="gradient" className="mb-4">
           <CardContent className="p-5">
             <div className="flex items-center justify-between">
@@ -79,7 +79,7 @@ const Goals = () => {
           </CardContent>
         </Card>
 
-        {/* Tabs */}
+        
         <div className="flex gap-2">
           {(['all', 'short-term', 'long-term'] as const).map((tab) => (
             <Button
@@ -94,7 +94,7 @@ const Goals = () => {
         </div>
       </div>
 
-      {/* Goals List */}
+      
       <div className="px-5 space-y-4">
         {filteredGoals.map((goal) => (
           <GoalCard 
@@ -114,7 +114,7 @@ const Goals = () => {
           </div>
         )}
 
-        {/* Suggested Goals */}
+        
         {userProfile && (
           <Card variant="outline" className="mt-6">
             <CardHeader className="pb-2">
@@ -128,8 +128,7 @@ const Goals = () => {
                 <div 
                   key={index}
                   className="flex items-center justify-between p-3 rounded-xl bg-muted/50 cursor-pointer hover:bg-muted transition-colors"
-                  onClick={() => {
-                    // Add suggested goal
+                    onClick={() => {
                     const newGoal: Goal = {
                       id: Date.now().toString(),
                       ...suggestion,
@@ -198,7 +197,7 @@ const GoalCard = ({
           </span>
         </div>
 
-        {/* Progress Bar */}
+        
         <div className="mb-4">
           <div className="flex justify-between text-sm mb-2">
             <span className="text-muted-foreground">
@@ -216,7 +215,7 @@ const GoalCard = ({
           </div>
         </div>
 
-        {/* Stats */}
+        
         <div className="flex items-center justify-between text-sm">
           <div className="flex items-center gap-2 text-muted-foreground">
             <Calendar className="w-4 h-4" />
@@ -227,7 +226,7 @@ const GoalCard = ({
           </span>
         </div>
 
-        {/* Quick Add */}
+        
         <div className="flex gap-2 mt-4">
           {[1000, 5000, 10000].map((amount) => (
             <Button

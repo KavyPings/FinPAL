@@ -45,7 +45,6 @@ const Onboarding = () => {
     if (currentStep < 4) {
       setCurrentStep(currentStep + 1);
     } else {
-      // Complete onboarding
       setUserProfile(formData);
       setIsOnboarded(true);
       addPoints(50, 'Completed profile setup');
@@ -86,7 +85,7 @@ const Onboarding = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      {/* Header */}
+    
       <div className="px-4 pt-4 pb-2">
         <div className="flex items-center gap-3 mb-6">
           {currentStep > 1 && (
@@ -120,7 +119,7 @@ const Onboarding = () => {
         </div>
       </div>
 
-      {/* Content */}
+      
       <div className="flex-1 px-4 pb-4 overflow-auto">
         {currentStep === 1 && (
           <div className="space-y-4 animate-fade-in">
@@ -249,7 +248,7 @@ const Onboarding = () => {
         )}
       </div>
 
-      {/* Footer */}
+      
       <div className="px-4 pb-6 pt-2">
         <Button
           variant="gradient"

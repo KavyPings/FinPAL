@@ -51,7 +51,6 @@ const Chat = () => {
     setInput('');
     setIsTyping(true);
 
-    // Simulate AI response delay
     setTimeout(() => {
       const response = generateResponse(message, userProfile);
       const assistantMessage: ChatMessage = {
@@ -68,7 +67,7 @@ const Chat = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col pb-24">
-      {/* Header */}
+      
       <div className="px-5 pt-4 pb-4 border-b border-border">
         <div className="flex items-center gap-3">
           <Button variant="ghost" size="icon-sm" onClick={() => navigate('/dashboard')}>
@@ -86,7 +85,7 @@ const Chat = () => {
         </div>
       </div>
 
-      {/* Messages */}
+      
       <div className="flex-1 overflow-auto px-5 py-4 space-y-4">
         {chatHistory.length === 0 && (
           <div className="animate-fade-in">
@@ -140,7 +139,7 @@ const Chat = () => {
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Input */}
+      
       <div className="px-5 py-4 border-t border-border bg-background">
         <div className="flex gap-2">
           <input
@@ -276,7 +275,6 @@ I see you have this as a goal! You're on the right track.
 📚 This is educational guidance to help you plan.`;
   }
 
-  // Default response
   return `Thanks for your question, ${name}! 🤔
 
 I'm designed to help you understand financial concepts and impacts. While I can't provide specific investment advice, I can help explain:

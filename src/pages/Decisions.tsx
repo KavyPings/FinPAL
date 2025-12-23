@@ -51,7 +51,7 @@ const Decisions = () => {
 
   return (
     <div className="min-h-screen bg-background pb-24">
-      {/* Header */}
+      
       <div className="px-5 pt-4 pb-6">
         <div className="flex items-center gap-3 mb-4">
           <Button variant="ghost" size="icon-sm" onClick={() => navigate('/dashboard')}>
@@ -66,7 +66,7 @@ const Decisions = () => {
 
       {!showAnalysis ? (
         <div className="px-5 animate-fade-in">
-          {/* Decision Type Selection */}
+          
           <section className="mb-6">
             <h2 className="text-sm font-semibold text-muted-foreground mb-3">What decision are you considering?</h2>
             <div className="grid grid-cols-2 gap-3">
@@ -97,7 +97,7 @@ const Decisions = () => {
 
           {selectedDecision && (
             <>
-              {/* Amount Input */}
+              
               <section className="mb-6 animate-fade-in">
                 <label className="text-sm font-semibold text-muted-foreground mb-3 block">
                   How much are you considering?
@@ -114,7 +114,7 @@ const Decisions = () => {
                 </div>
               </section>
 
-              {/* Duration Selection */}
+              
               {(selectedDecision === 'emi' || selectedDecision === 'sip') && (
                 <section className="mb-6 animate-fade-in">
                   <label className="text-sm font-semibold text-muted-foreground mb-3 block">
@@ -139,7 +139,7 @@ const Decisions = () => {
                 </section>
               )}
 
-              {/* Analyze Button */}
+              
               <Button
                 variant="gradient"
                 size="xl"
@@ -198,7 +198,7 @@ const AnalysisResult = ({
 
   return (
     <div className="space-y-4">
-      {/* Summary Card */}
+      
       <Card variant="gradient">
         <CardContent className="p-5">
           <h3 className="text-lg font-bold text-primary-foreground mb-2">Impact Analysis</h3>
@@ -208,7 +208,7 @@ const AnalysisResult = ({
         </CardContent>
       </Card>
 
-      {/* Key Metrics */}
+      
       <div className="grid grid-cols-2 gap-3">
         {decision === 'emi' && (
           <>
@@ -254,7 +254,7 @@ const AnalysisResult = ({
         />
       </div>
 
-      {/* Insights */}
+      
       <Card variant="elevated">
         <CardHeader className="pb-2">
           <CardTitle className="text-base flex items-center gap-2">
@@ -269,7 +269,7 @@ const AnalysisResult = ({
         </CardContent>
       </Card>
 
-      {/* Disclaimer */}
+      
       <Card className="bg-muted/50 border-0">
         <CardContent className="p-4">
           <p className="text-xs text-muted-foreground">

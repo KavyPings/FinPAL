@@ -78,7 +78,7 @@ const Rewards = () => {
 
   return (
     <div className="min-h-screen bg-background pb-24">
-      {/* Header */}
+      
       <div className="bg-gradient-hero px-5 pt-4 pb-8 rounded-b-[2rem]">
         <div className="flex items-center gap-3 mb-6">
           <Button variant="ghost" size="icon-sm" className="text-primary-foreground" onClick={() => navigate('/dashboard')}>
@@ -90,7 +90,7 @@ const Rewards = () => {
           </div>
         </div>
 
-        {/* Points Overview */}
+        
         <Card className="bg-primary-foreground/10 backdrop-blur-sm border-0 text-primary-foreground">
           <CardContent className="p-5">
             <div className="flex items-center justify-between">
@@ -121,7 +121,7 @@ const Rewards = () => {
       </div>
 
       <div className="px-5 -mt-4 space-y-6">
-        {/* How to Earn */}
+        
         <Card variant="elevated">
           <CardHeader className="pb-2">
             <CardTitle className="text-base flex items-center gap-2">
@@ -138,7 +138,7 @@ const Rewards = () => {
           </CardContent>
         </Card>
 
-        {/* Achievements */}
+        
         <div>
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-lg font-bold text-foreground">Achievements</h2>
@@ -176,7 +176,7 @@ const Rewards = () => {
           </div>
         </div>
 
-        {/* Redeem Rewards */}
+        
         <div>
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-lg font-bold text-foreground">Redeem Rewards</h2>
@@ -217,7 +217,7 @@ const Rewards = () => {
           </div>
         </div>
 
-        {/* Recent Activity */}
+        
         {points.history.length > 0 && (
           <div>
             <h2 className="text-lg font-bold text-foreground mb-4">Recent Activity</h2>
@@ -234,7 +234,7 @@ const Rewards = () => {
           </div>
         )}
 
-        {/* Monetization Note */}
+        
         <Card className="bg-muted/50 border-0">
           <CardContent className="p-4">
             <p className="text-xs text-muted-foreground">
